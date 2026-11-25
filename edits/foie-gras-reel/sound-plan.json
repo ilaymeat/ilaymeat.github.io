@@ -1,0 +1,7 @@
+{"voice":"base.mp4 audio, compressed, -16 LUFS","music":"none (no music uploaded)","cues":[
+{"t":55.10,"sfx":"whoosh","why":"וגולת הכותרת enters"},
+{"t":56.20,"sfx":"impact (soft)","why":"title lands, particle burst"},
+{"t":57.83,"sfx":"impact (big) + flash","why":"כבד אווז"},
+{"t":58.05,"sfx":"shimmer","why":"crown and sparkles"},
+{"t":59.20,"sfx":"pop","why":"230 ₪ לראש"},
+{"t":62.15,"sfx":"whoosh","why":"end card"}],"target":"-16 LUFS"}

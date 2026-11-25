@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="he">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, height=1920">
+<title>ILAY MEAT · גולת הכותרת</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<script src="gsap.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#14100e}
+#root{width:1080px;height:1920px;position:relative;overflow:hidden;background:#14100e;color:#f6ede4}
+#cam{position:absolute;inset:0;transform-origin:50% 45%}
+#v{position:absolute;inset:0;width:1080px;height:1920px;object-fit:cover}
+#grade{position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 40%,rgba(0,0,0,0) 55%,rgba(20,16,14,.55) 100%)}
+#dim{position:absolute;inset:0;background:#0d0a09;opacity:0}
+#flash{position:absolute;inset:0;background:#fff7e8;opacity:0}
+.chip{position:absolute;top:190px;left:0;right:0;display:flex;justify-content:center;opacity:0}
+.chip span{font:800 40px Heebo;color:#14100e;background:#d6a656;border-radius:999px;padding:10px 34px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.cap{position:absolute;left:70px;right:180px;top:1400px;display:flex;justify-content:center;opacity:0}
+.cap div{font:400 66px/1.15 'Secular One';color:#f6ede4;text-align:center;background:rgba(20,16,14,.72);border-radius:22px;padding:14px 30px 18px;text-shadow:0 3px 14px rgba(0,0,0,.5)}
+.hl{color:#d6a656;background:linear-gradient(transparent 74%,rgba(200,64,42,.9) 74%,rgba(200,64,42,.9) 90%,transparent 90%)}
+#hook{position:absolute;left:60px;right:60px;top:1060px;text-align:center;opacity:0}
+#hook .k{font:800 42px Heebo;color:#d6a656;display:flex;justify-content:center;align-items:center;gap:18px}
+#hook .k::before,#hook .k::after{content:"";width:46px;height:5px;border-radius:3px;background:#c8402a}
+#hook .t{font:700 150px/.95 Karantina;color:#f6ede4;text-shadow:0 6px 30px rgba(0,0,0,.6);margin-top:10px}
+#hook .t b{color:#d6a656;font-weight:700}
+/* hero */
+#rays{position:absolute;left:50%;top:1180px;width:2200px;height:2200px;margin:-1100px 0 0 -1100px;border-radius:50%;
+ background:repeating-conic-gradient(rgba(214,166,86,.22) 0deg 7deg,rgba(214,166,86,0) 7deg 22deg);opacity:0;
+ -webkit-mask:radial-gradient(circle,#000 0,#000 25%,transparent 62%);mask:radial-gradient(circle,#000 0,#000 25%,transparent 62%)}
+#glow{position:absolute;left:50%;top:1180px;width:1100px;height:1100px;margin:-550px 0 0 -550px;border-radius:50%;background:radial-gradient(circle,rgba(214,166,86,.55),rgba(200,64,42,.18) 40%,transparent 66%);opacity:0}
+#g1{position:absolute;left:0;right:0;top:1000px;text-align:center;opacity:0}
+#g1 .l{display:block;font:700 300px/.86 Karantina;color:#d6a656;letter-spacing:0;text-shadow:0 0 40px rgba(214,166,86,.45),0 10px 40px rgba(0,0,0,.7)}
+#g1 .l2{color:#f6ede4}
+#g1 .shine{position:absolute;top:0;bottom:0;width:260px;left:-300px;background:linear-gradient(100deg,transparent,rgba(255,244,220,.9),transparent);transform:skewX(-20deg);mix-blend-mode:screen;opacity:.9}
+#bar{position:absolute;left:300px;right:300px;top:1555px;height:12px;border-radius:6px;background:#c8402a;transform-origin:100% 50%;transform:scaleX(0)}
+#parts{position:absolute;left:540px;top:1260px;width:0;height:0}
+.p{position:absolute;width:18px;height:18px;border-radius:50%;margin:-9px 0 0 -9px;opacity:0}
+#g2{position:absolute;left:0;right:0;top:1040px;text-align:center;opacity:0}
+#crown{display:block;margin:0 auto 6px;width:300px;height:190px;filter:drop-shadow(0 8px 26px rgba(214,166,86,.7))}
+#g2 .k{font:800 46px Heebo;color:#d6a656;letter-spacing:.04em}
+#g2 .t{font:400 168px/1 'Secular One';color:#f6ede4;text-shadow:0 0 50px rgba(214,166,86,.55),0 10px 40px rgba(0,0,0,.75)}
+.spark{position:absolute;width:56px;height:56px;margin:-28px 0 0 -28px;opacity:0}
+/* price */
+#price{position:absolute;left:0;right:0;top:1330px;display:flex;justify-content:center;opacity:0}
+#price div{display:flex;align-items:baseline;gap:22px;background:#14100e;border:4px solid #d6a656;border-radius:999px;padding:18px 56px 22px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+#price .a{font:400 150px/1 'Secular One';color:#d6a656}
+#price .u{font:800 60px Heebo;color:#f6ede4}
+/* end */
+#end{position:absolute;left:0;right:0;top:0;bottom:0;opacity:0}
+#end .bg{position:absolute;left:0;right:0;top:38%;bottom:0;background:linear-gradient(180deg,rgba(20,16,14,0),rgba(20,16,14,.94) 16%,#14100e)}
+#end .in{position:absolute;left:0;right:0;top:1000px;display:flex;flex-direction:column;align-items:center;gap:30px;text-align:center}
+#end .brand{font:400 124px 'Secular One';color:#d6a656}
+#end .sub{font:400 66px 'Secular One'}
+#end .pill{display:flex;align-items:baseline;gap:20px;border:3px solid #d6a656;border-radius:999px;padding:12px 46px;font:700 46px Heebo}
+#end .pill b{font:400 84px 'Secular One';color:#d6a656;font-weight:400}
+#end .cta{background:#1fae5b;color:#fff;border-radius:999px;padding:22px 56px;font:800 54px Heebo;box-shadow:0 14px 40px rgba(0,0,0,.45)}
+#price .nis{font:700 110px Heebo}
+#end .pill .nis{font:700 64px Heebo}
+#end .ph{font:700 46px Heebo;opacity:.9}
+</style>
+</head>
+<body>
+<main id="root" data-composition-id="foie" data-start="0" data-duration="65.37" data-width="1080" data-height="1920">
+  <div id="cam" data-layout-allow-occlusion><video id="v" data-layout-allow-occlusion src="base.mp4" muted playsinline data-start="0" data-duration="65.37"></video><div id="grade"></div></div>
+  <div id="dim"></div>
+  <div id="chips"></div>
+  <div id="hook"><div class="k" dir="rtl" lang="he">יום אירוע</div><div class="t" dir="rtl" lang="he"><b><bdi dir="ltr">12</bdi> איש</b>, ככה מתכוננים</div></div>
+  <div id="caps"></div>
+  <div id="glow"></div><div id="rays"></div>
+  <div id="g1" dir="rtl" lang="he"><span class="l">וגולת</span><span class="l l2">הכותרת</span><div class="shine"></div></div>
+  <div id="bar"></div>
+  <div id="parts"></div>
+  <div id="g2" dir="rtl" lang="he">
+    <svg id="crown" viewBox="0 0 300 190"><defs><linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3d18a"/><stop offset="1" stop-color="#b98232"/></linearGradient></defs>
+      <path d="M20 160 L35 50 L95 110 L150 20 L205 110 L265 50 L280 160 Z" fill="url(#gg)" stroke="#fff1cf" stroke-width="5" stroke-linejoin="round"/>
+      <rect x="20" y="152" width="260" height="30" rx="8" fill="url(#gg)" stroke="#fff1cf" stroke-width="5"/>
+      <circle cx="150" cy="20" r="14" fill="#c8402a" stroke="#fff1cf" stroke-width="4"/><circle cx="35" cy="50" r="11" fill="#c8402a" stroke="#fff1cf" stroke-width="4"/><circle cx="265" cy="50" r="11" fill="#c8402a" stroke="#fff1cf" stroke-width="4"/></svg>
+    <div class="k">גולת הכותרת שלנו</div>
+    <div class="t">כבד אווז</div>
+  </div>
+  <div id="sparks"></div>
+  <div id="price" dir="rtl" lang="he"><div><span class="a"><bdi dir="ltr">230 <span class="nis">₪</span></bdi></span><span class="u">לראש</span></div></div>
+  <div id="end"><div class="bg"></div><div class="in" dir="rtl" lang="he">
+    <div class="brand"><bdi dir="ltr">ILAY MEAT</bdi></div>
+    <div class="sub">שף בשרים <span class="hl">עד הבית</span></div>
+    <div class="pill"><span>ארוחת שף</span><b><bdi dir="ltr">230 <span class="nis">₪</span></bdi></b><span>לאדם</span></div>
+    <div class="cta">בדיקת תאריך בוואטסאפ</div>
+    <div class="ph"><bdi dir="ltr">054-739-0520</bdi></div></div></div>
+  <div id="flash" data-layout-allow-occlusion></div>
+</main>
+<script>
+const DUR=65.37;
+const CUES=[{"s": 0.07, "e": 1.57, "h": "מה איתכם חברים שלי?"}, {"s": 1.57, "e": 2.45, "h": "אז ככה יש לנו יום אירוע"}, {"s": 2.45, "e": 3.48, "h": "של <bdi dir=\"ltr\">12</bdi> איש"}, {"s": 3.48, "e": 4.75, "h": "נראה לכם בקטנה מה אנחנו"}, {"s": 4.75, "e": 6.36, "h": "עושים ומה ההכנות שהיו"}, {"s": 6.36, "e": 7.98, "h": "לנו ואיך אנחנו מריצים"}, {"s": 7.98, "e": 8.64, "h": "אירוע"}, {"s": 8.64, "e": 10.4, "h": "אז ככה יש לנו פה מטבוחה"}, {"s": 10.4, "e": 11.68, "h": "חריפה יש לנו חצילים"}, {"s": 11.68, "e": 13.6, "h": "חריפים יש לנו טחינה כרוב"}, {"s": 13.6, "e": 15.39, "h": "במיונז קולסלאו גזר"}, {"s": 15.39, "e": 17.3, "h": "מרוקאי שום קונפי"}, {"s": 17.3, "e": 19.12, "h": "פטרוזיליה כמובן וחומוס"}, {"s": 19.12, "e": 20.56, "h": "מנות ראשונות שלנו זה"}, {"s": 20.56, "e": 21.24, "h": "עראיס"}, {"s": 21.24, "e": 22.9, "h": "עראיס ביתי"}, {"s": 22.9, "e": 24.96, "h": "דבר שני זה פיצה אסדו"}, {"s": 24.96, "e": 26.94, "h": "פיצה אסדו שישבה <bdi dir=\"ltr\">6</bdi> שעות"}, {"s": 26.94, "e": 27.7, "h": "בתנור"}, {"s": 27.7, "e": 28.69, "h": "מגיעה על בסיס פיצה"}, {"s": 28.69, "e": 30.54, "h": "וכמובן בטטת המדורה שישבה"}, {"s": 30.54, "e": 32.18, "h": "אתמול במדורה כל הלילה"}, {"s": 32.18, "e": 33.75, "h": "לפלטות הראשונות שאנחנו"}, {"s": 33.75, "e": 35.27, "h": "מגישים קבב הבית מרגז"}, {"s": 35.27, "e": 36.54, "h": "הבית"}, {"s": 36.67, "e": 38.01, "h": "ופרגית במרינדה מיוחדת של"}, {"s": 38.01, "e": 39.45, "h": "צ'ילי מתוק ועוד כמה"}, {"s": 39.45, "e": 40.63, "h": "דברים טובים"}, {"s": 40.63, "e": 42.34, "h": "והדבר העיקרי והכי חשוב"}, {"s": 42.34, "e": 43.77, "h": "זה הבשרים שלנו"}, {"s": 43.77, "e": 45.43, "h": "סינטה סופר פרימיום"}, {"s": 45.43, "e": 47.38, "h": "אנטריקוט סופר פרימיום"}, {"s": 47.38, "e": 49.72, "h": "תראו איזה תראו איזה שיש"}, {"s": 49.72, "e": 50.35, "h": "תראו"}, {"s": 50.35, "e": 52.94, "h": "וכמובן פילה בקר כשר הכל"}, {"s": 52.94, "e": 55.3, "h": "בד\"ץ תעודת כשרות"}, {"s": 55.39, "e": 58.07, "h": "וגולת הכותרת שלנו כבד"}, {"s": 58.07, "e": 58.54, "h": "אווז"}, {"s": 58.54, "e": 60.68, "h": "כל זה ב-<bdi dir=\"ltr\">230</bdi> שקל בלבד"}, {"s": 60.68, "e": 61.35, "h": "לראש"}, {"s": 61.35, "e": 62.37, "h": "מחכים לכם"}];
+const KEY=['12','מטבוחה','חצילים','טחינה','קולסלאו','גזר','קונפי','וחומוס','עראיס','אסדו','בטטת','קבב','מרגז','ופרגית','סינטה','אנטריקוט','שיש','פילה','בד"ץ','מחכים'];
+const HIDE=[[55.3,58.54],[58.54,61.35]]; // hero + price say these words on screen
+const CHIPS=[[8.6,19.05,'הסלטים'],[19.12,32.1,'מנות ראשונות'],[32.18,40.55,'הפלטות'],[40.63,55.2,'הבשרים']];
+const tl=gsap.timeline({paused:true});
+const caps=document.getElementById('caps');
+CUES.forEach((c,i)=>{
+  if(HIDE.some(([a,b])=>c.s>=a-0.01&&c.s<b)) return;
+  const w=document.createElement('div');w.className='cap';
+  let h=c.h;for(const k of KEY){const r=new RegExp('(^|\\s|>)('+k.replace(/"/g,'"')+')(?=\\s|<|$)');if(r.test(h)){h=h.replace(r,'$1<span class="hl">$2</span>');break;}}
+  w.innerHTML='<div dir="rtl" lang="he">'+h+'</div>';caps.appendChild(w);
+  tl.fromTo(w,{opacity:0,y:18,scale:.96},{opacity:1,y:0,scale:1,duration:.16,ease:'power2.out'},c.s);
+  tl.to(w,{opacity:0,duration:.08},Math.max(c.s+.2,c.e-.08));
+});
+const chips=document.getElementById('chips');
+CHIPS.forEach(([s,e,t])=>{const d=document.createElement('div');d.className='chip';d.innerHTML='<span dir="rtl" lang="he">'+t+'</span>';chips.appendChild(d);
+  tl.fromTo(d,{opacity:0,y:-30},{opacity:1,y:0,duration:.3,ease:'back.out(2)'},s);tl.to(d,{opacity:0,y:-20,duration:.2},e-.2);});
+// hook
+tl.fromTo('#hook',{opacity:1,y:24},{opacity:1,y:0,duration:.4,ease:'power3.out'},0);
+tl.to('#hook',{opacity:0,y:-20,duration:.25},3.3);
+// ---------- HERO: וגולת הכותרת ... כבד אווז ----------
+const T=55.39, K=57.85;
+tl.fromTo('#dim',{opacity:0},{opacity:.5,duration:.35},T);
+tl.fromTo('#cam',{scale:1},{scale:1.14,duration:2.3,ease:'power1.out'},T);
+tl.fromTo('#glow',{opacity:0,scale:.4},{opacity:1,scale:1,duration:.6,ease:'power2.out'},T+.05);
+tl.fromTo('#rays',{opacity:0,rotation:0},{opacity:1,rotation:40,duration:3.9,ease:'none'},T+.05);
+tl.fromTo('#g1 .l',{opacity:0,scale:2.4,y:-40},{opacity:1,scale:1,y:0,duration:.32,ease:'power4.in',stagger:.42},T+.05);
+tl.fromTo('#g1',{opacity:0},{opacity:1,duration:.01},T+.05);
+tl.fromTo('#g1 .shine',{x:0},{x:1500,duration:.7,ease:'power2.inOut'},T+.95);
+tl.fromTo('#bar',{scaleX:0},{scaleX:1,duration:.4,ease:'power3.out'},T+.85);
+// burst when "הכותרת" lands (finger up)
+const parts=document.getElementById('parts');
+for(let i=0;i<38;i++){const p=document.createElement('div');p.className='p';p.style.background=i%3?'#d6a656':'#c8402a';const s=.5+((i*37)%10)/8;p.style.transform='scale('+s+')';parts.appendChild(p);
+  const a=(i/38)*Math.PI*2+((i*13)%7)/10,d=380+((i*53)%9)*55;
+  tl.fromTo(p,{x:0,y:0,opacity:1},{immediateRender:false,x:Math.cos(a)*d,y:Math.sin(a)*d*.8+120,opacity:0,duration:1.1,ease:'power3.out'},T+.82);}
+tl.fromTo('#cam',{x:0,y:0},{immediateRender:false,keyframes:[{x:-16,y:10,duration:.06},{x:13,y:-8,duration:.06},{x:-6,y:5,duration:.06},{x:0,y:0,duration:.08}]},T+.82);
+// out: title flies into the camera (zoom-through)
+tl.to('#g1',{scale:7,opacity:0,filter:'blur(8px)',duration:.45,ease:'power4.in'},K-.45);
+tl.to('#bar',{opacity:0,duration:.2},K-.3);
+// "כבד אווז" impact
+tl.fromTo('#flash',{opacity:.85},{opacity:0,duration:.28,ease:'power2.out',immediateRender:false},K);
+tl.fromTo('#cam',{x:0,y:0},{immediateRender:false,keyframes:[{x:18,y:-12,duration:.06},{x:-15,y:9,duration:.06},{x:7,y:-6,duration:.06},{x:0,y:0,duration:.1}]},K);
+tl.fromTo('#g2',{opacity:0},{opacity:1,duration:.01},K);
+tl.fromTo('#g2 .t',{scale:1.9,opacity:0},{scale:1,opacity:1,duration:.3,ease:'back.out(1.6)'},K);
+tl.fromTo('#g2 .k',{y:20,opacity:0},{y:0,opacity:1,duration:.3},K+.15);
+tl.fromTo('#crown',{y:-520,rotation:-25,opacity:0},{y:0,rotation:0,opacity:1,duration:.55,ease:'bounce.out'},K+.1);
+const sp=document.getElementById('sparks');
+[[250,1010],[830,980],[180,1300],[900,1330],[540,900],[340,1420],[760,1440]].forEach(([x,y],i)=>{const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('viewBox','0 0 56 56');s.classList.add('spark');s.style.left=x+'px';s.style.top=y+'px';
+  s.innerHTML='<path d="M28 0 C31 20 36 25 56 28 C36 31 31 36 28 56 C25 36 20 31 0 28 C20 25 25 20 28 0Z" fill="#fff1cf"/>';sp.appendChild(s);
+  const t0=K+.25+i*.11;tl.fromTo(s,{scale:0,opacity:0,rotation:0},{scale:1.1,opacity:1,rotation:90,duration:.25,ease:'back.out(3)'},t0);tl.to(s,{scale:0,opacity:0,duration:.3},t0+.45);});
+// hero out
+tl.to(['#g2','#glow','#rays'],{opacity:0,duration:.25},59.0);
+tl.to('#dim',{opacity:0,duration:.3},59.0);
+tl.to('#cam',{scale:1,duration:.4,ease:'power2.inOut'},59.0);
+// price
+tl.fromTo('#price',{opacity:0,scale:.3},{opacity:1,scale:1,duration:.4,ease:'back.out(2.2)'},59.2);
+tl.to('#price',{opacity:0,y:-20,duration:.2},61.2);
+// end card
+tl.fromTo('#end',{opacity:0},{opacity:1,duration:.4},62.37);
+tl.fromTo('#end .in > *',{opacity:0,y:40},{opacity:1,y:0,duration:.4,stagger:.1,ease:'power3.out'},62.45);
+tl.to({}, {duration:.1}, DUR-.1);
+window.__timelines={foie:tl};
+</script>
+</body>
+</html>

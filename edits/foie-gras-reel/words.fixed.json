@@ -1,0 +1,697 @@
+[
+{
+"text": "מה",
+"startMs": 100,
+"endMs": 140
+},
+{
+"text": "איתכם",
+"startMs": 140,
+"endMs": 490
+},
+{
+"text": "חברים",
+"startMs": 490,
+"endMs": 840
+},
+{
+"text": "שלי?",
+"startMs": 840,
+"endMs": 1290
+},
+{
+"text": "אז",
+"startMs": 1600,
+"endMs": 1600
+},
+{
+"text": "ככה",
+"startMs": 1600,
+"endMs": 1610
+},
+{
+"text": "יש",
+"startMs": 1700,
+"endMs": 1740
+},
+{
+"text": "לנו",
+"startMs": 1740,
+"endMs": 1930
+},
+{
+"text": "יום",
+"startMs": 1940,
+"endMs": 2120
+},
+{
+"text": "אירוע",
+"startMs": 2140,
+"endMs": 2450
+},
+{
+"text": "של",
+"startMs": 2450,
+"endMs": 2530
+},
+{
+"text": "12",
+"startMs": 2580,
+"endMs": 2920
+},
+{
+"text": "איש.",
+"startMs": 2980,
+"endMs": 3480
+},
+{
+"text": "נראה",
+"startMs": 3480,
+"endMs": 3730
+},
+{
+"text": "לכם",
+"startMs": 3730,
+"endMs": 3920
+},
+{
+"text": "בקטנה",
+"startMs": 3920,
+"endMs": 4290
+},
+{
+"text": "מה",
+"startMs": 4290,
+"endMs": 4400
+},
+{
+"text": "אנחנו",
+"startMs": 4490,
+"endMs": 4670
+},
+{
+"text": "עושים,",
+"startMs": 4780,
+"endMs": 5320
+},
+{
+"text": "ומה",
+"startMs": 5320,
+"endMs": 5560
+},
+{
+"text": "ההכנות",
+"startMs": 5560,
+"endMs": 6040
+},
+{
+"text": "שהיו",
+"startMs": 6040,
+"endMs": 6360
+},
+{
+"text": "לנו,",
+"startMs": 6360,
+"endMs": 6780
+},
+{
+"text": "ואיך",
+"startMs": 7360,
+"endMs": 7360
+},
+{
+"text": "אנחנו",
+"startMs": 7460,
+"endMs": 7500
+},
+{
+"text": "מריצים",
+"startMs": 7500,
+"endMs": 7980
+},
+{
+"text": "אירוע.",
+"startMs": 7980,
+"endMs": 8640
+},
+{
+"text": "אז",
+"startMs": 8640,
+"endMs": 8690
+},
+{
+"text": "ככה,",
+"startMs": 8870,
+"endMs": 9280
+},
+{
+"text": "יש",
+"startMs": 9280,
+"endMs": 9440
+},
+{
+"text": "לנו",
+"startMs": 9440,
+"endMs": 9680
+},
+{
+"text": "פה",
+"startMs": 9680,
+"endMs": 9840
+},
+{
+"text": "מטבוחה",
+"startMs": 9840,
+"endMs": 10400
+},
+{
+"text": "חריפה,",
+"startMs": 10400,
+"endMs": 10900
+},
+{
+"text": "יש",
+"startMs": 11050,
+"endMs": 11140
+},
+{
+"text": "לנו",
+"startMs": 11140,
+"endMs": 11320
+},
+{
+"text": "חצילים",
+"startMs": 11320,
+"endMs": 11640
+},
+{
+"text": "חריפים,",
+"startMs": 11710,
+"endMs": 12130
+},
+{
+"text": "יש",
+"startMs": 12160,
+"endMs": 12350
+},
+{
+"text": "לנו",
+"startMs": 12350,
+"endMs": 12640
+},
+{
+"text": "טחינה,",
+"startMs": 12640,
+"endMs": 13320
+},
+{
+"text": "כרוב",
+"startMs": 13320,
+"endMs": 13600
+},
+{
+"text": "במיונז,",
+"startMs": 13600,
+"endMs": 14160
+},
+{
+"text": "קולסלאו,",
+"startMs": 14200,
+"endMs": 14980
+},
+{
+"text": "גזר",
+"startMs": 15360,
+"endMs": 15360
+},
+{
+"text": "מרוקאי,",
+"startMs": 15420,
+"endMs": 16260
+},
+{
+"text": "שום",
+"startMs": 16640,
+"endMs": 16640
+},
+{
+"text": "קונפי,",
+"startMs": 16660,
+"endMs": 17300
+},
+{
+"text": "פטרוזיליה",
+"startMs": 17320,
+"endMs": 17880
+},
+{
+"text": "כמובן,",
+"startMs": 17880,
+"endMs": 18470
+},
+{
+"text": "וחומוס.",
+"startMs": 18490,
+"endMs": 19120
+},
+{
+"text": "מנות",
+"startMs": 19120,
+"endMs": 19430
+},
+{
+"text": "ראשונות",
+"startMs": 19530,
+"endMs": 20080
+},
+{
+"text": "שלנו",
+"startMs": 20080,
+"endMs": 20400
+},
+{
+"text": "זה",
+"startMs": 20400,
+"endMs": 20560
+},
+{
+"text": "עראיס.",
+"startMs": 20560,
+"endMs": 21240
+},
+{
+"text": "עראיס",
+"startMs": 21240,
+"endMs": 21680
+},
+{
+"text": "ביתי.",
+"startMs": 21760,
+"endMs": 22900
+},
+{
+"text": "דבר",
+"startMs": 22900,
+"endMs": 23240
+},
+{
+"text": "שני,",
+"startMs": 23240,
+"endMs": 23830
+},
+{
+"text": "זה",
+"startMs": 23880,
+"endMs": 24000
+},
+{
+"text": "פיצה",
+"startMs": 24000,
+"endMs": 24300
+},
+{
+"text": "אסדו.",
+"startMs": 24300,
+"endMs": 24960
+},
+{
+"text": "פיצה",
+"startMs": 24960,
+"endMs": 25270
+},
+{
+"text": "אסדו,",
+"startMs": 25270,
+"endMs": 25860
+},
+{
+"text": "שישבה",
+"startMs": 25860,
+"endMs": 26360
+},
+{
+"text": "6",
+"startMs": 26360,
+"endMs": 26550
+},
+{
+"text": "שעות",
+"startMs": 26610,
+"endMs": 26940
+},
+{
+"text": "בתנור,",
+"startMs": 26940,
+"endMs": 27580
+},
+{
+"text": "מגיעה",
+"startMs": 28460,
+"endMs": 28460
+},
+{
+"text": "על",
+"startMs": 28460,
+"endMs": 28460
+},
+{
+"text": "בסיס",
+"startMs": 28460,
+"endMs": 28460
+},
+{
+"text": "פיצה",
+"startMs": 28470,
+"endMs": 28690
+},
+{
+"text": "וכמובן",
+"startMs": 28690,
+"endMs": 29200
+},
+{
+"text": "בטטת",
+"startMs": 29200,
+"endMs": 29490
+},
+{
+"text": "המדורה,",
+"startMs": 29490,
+"endMs": 30170
+},
+{
+"text": "שישבה",
+"startMs": 30170,
+"endMs": 30540
+},
+{
+"text": "אתמול",
+"startMs": 30540,
+"endMs": 30910
+},
+{
+"text": "במדורה",
+"startMs": 30910,
+"endMs": 31440
+},
+{
+"text": "כל",
+"startMs": 31440,
+"endMs": 31530
+},
+{
+"text": "הלילה.",
+"startMs": 31640,
+"endMs": 32180
+},
+{
+"text": "לפלטות",
+"startMs": 32180,
+"endMs": 32620
+},
+{
+"text": "הראשונות",
+"startMs": 32620,
+"endMs": 33220
+},
+{
+"text": "שאנחנו",
+"startMs": 33220,
+"endMs": 33750
+},
+{
+"text": "מגישים",
+"startMs": 33750,
+"endMs": 34260
+},
+{
+"text": "קבב",
+"startMs": 34310,
+"endMs": 34630
+},
+{
+"text": "הבית,",
+"startMs": 34630,
+"endMs": 35000
+},
+{
+"text": "מרגז",
+"startMs": 35000,
+"endMs": 35270
+},
+{
+"text": "הבית,",
+"startMs": 35280,
+"endMs": 36040
+},
+{
+"text": "ופרגית",
+"startMs": 36700,
+"endMs": 36700
+},
+{
+"text": "במרינדה",
+"startMs": 36760,
+"endMs": 37300
+},
+{
+"text": "מיוחדת",
+"startMs": 37300,
+"endMs": 37840
+},
+{
+"text": "של",
+"startMs": 37840,
+"endMs": 38010
+},
+{
+"text": "צ'ילי",
+"startMs": 38010,
+"endMs": 38470
+},
+{
+"text": "מתוק",
+"startMs": 38470,
+"endMs": 38830
+},
+{
+"text": "ועוד",
+"startMs": 38830,
+"endMs": 39190
+},
+{
+"text": "כמה",
+"startMs": 39190,
+"endMs": 39450
+},
+{
+"text": "דברים",
+"startMs": 39460,
+"endMs": 39910
+},
+{
+"text": "טובים.",
+"startMs": 39910,
+"endMs": 40630
+},
+{
+"text": "והדבר",
+"startMs": 40630,
+"endMs": 41080
+},
+{
+"text": "העיקרי",
+"startMs": 41080,
+"endMs": 41620
+},
+{
+"text": "והכי",
+"startMs": 41620,
+"endMs": 41980
+},
+{
+"text": "חשוב",
+"startMs": 41980,
+"endMs": 42340
+},
+{
+"text": "זה",
+"startMs": 42340,
+"endMs": 42500
+},
+{
+"text": "הבשרים",
+"startMs": 42550,
+"endMs": 43150
+},
+{
+"text": "שלנו.",
+"startMs": 43150,
+"endMs": 43770
+},
+{
+"text": "סינטה",
+"startMs": 43770,
+"endMs": 44220
+},
+{
+"text": "סופר",
+"startMs": 44240,
+"endMs": 44590
+},
+{
+"text": "פרימיום,",
+"startMs": 44590,
+"endMs": 45340
+},
+{
+"text": "אנטריקוט,",
+"startMs": 45460,
+"endMs": 46120
+},
+{
+"text": "סופר",
+"startMs": 46120,
+"endMs": 46480
+},
+{
+"text": "פרימיום.",
+"startMs": 46480,
+"endMs": 47380
+},
+{
+"text": "תראו",
+"startMs": 47380,
+"endMs": 47690
+},
+{
+"text": "איזה,",
+"startMs": 47800,
+"endMs": 48370
+},
+{
+"text": "תראו",
+"startMs": 48370,
+"endMs": 48730
+},
+{
+"text": "איזה",
+"startMs": 48730,
+"endMs": 49180
+},
+{
+"text": "שיש,",
+"startMs": 49180,
+"endMs": 49720
+},
+{
+"text": "תראו.",
+"startMs": 49720,
+"endMs": 50350
+},
+{
+"text": "וכמובן,",
+"startMs": 50350,
+"endMs": 51160
+},
+{
+"text": "פילה",
+"startMs": 51160,
+"endMs": 51520
+},
+{
+"text": "בקר,",
+"startMs": 51520,
+"endMs": 52060
+},
+{
+"text": "כשר,",
+"startMs": 52060,
+"endMs": 52690
+},
+{
+"text": "הכל",
+"startMs": 52690,
+"endMs": 52910
+},
+{
+"text": "בד\"ץ,",
+"startMs": 52970,
+"endMs": 53410
+},
+{
+"text": "תעודת",
+"startMs": 53410,
+"endMs": 53860
+},
+{
+"text": "כשרות,",
+"startMs": 53860,
+"endMs": 54800
+},
+{
+"text": "וגולת",
+"startMs": 55420,
+"endMs": 55870
+},
+{
+"text": "הכותרת",
+"startMs": 55870,
+"endMs": 56670
+},
+{
+"text": "שלנו,",
+"startMs": 56670,
+"endMs": 57520
+},
+{
+"text": "כבד",
+"startMs": 57880,
+"endMs": 58070
+},
+{
+"text": "אווז.",
+"startMs": 58070,
+"endMs": 58540
+},
+{
+"text": "כל",
+"startMs": 58540,
+"endMs": 58720
+},
+{
+"text": "זה",
+"startMs": 58720,
+"endMs": 58900
+},
+{
+"text": "ב-230",
+"startMs": 58900,
+"endMs": 59920
+},
+{
+"text": "שקל",
+"startMs": 59920,
+"endMs": 60190
+},
+{
+"text": "בלבד",
+"startMs": 60190,
+"endMs": 60630
+},
+{
+"text": "לראש.",
+"startMs": 60710,
+"endMs": 61350
+},
+{
+"text": "מחכים",
+"startMs": 61360,
+"endMs": 61910
+},
+{
+"text": "לכם.",
+"startMs": 61910,
+"endMs": 62300
+}
+]
