@@ -58,6 +58,12 @@ body{background:#14100e}
 #end .cta{background:#1fae5b;color:#fff;border-radius:999px;padding:22px 56px;font:800 54px Heebo;box-shadow:0 14px 40px rgba(0,0,0,.45)}
 #price .nis{font:700 110px Heebo}
 #end .pill .nis{font:700 64px Heebo}
+#chili{position:absolute;left:720px;top:300px;width:270px;height:270px;opacity:0;transform-origin:50% 10%}
+#glint{position:absolute;left:0;right:0;top:860px;height:1000px;overflow:hidden;opacity:0;pointer-events:none}
+#glint i{position:absolute;top:-200px;width:240px;height:1400px;left:-400px;background:linear-gradient(90deg,transparent,rgba(255,240,210,.75),transparent);transform:rotate(22deg);mix-blend-mode:screen}
+.gs{position:absolute;width:70px;height:70px;margin:-35px 0 0 -35px;opacity:0}
+#tooth{position:absolute;left:668px;top:548px;width:0;height:0}
+#tooth svg{position:absolute;width:84px;height:84px;left:-42px;top:-42px;opacity:0;filter:drop-shadow(0 0 18px rgba(255,255,255,.95))}
 #end .ph{font:700 46px Heebo;opacity:.9}
 </style>
 </head>
@@ -81,6 +87,10 @@ body{background:#14100e}
     <div class="t">כבד אווז</div>
   </div>
   <div id="sparks"></div>
+  <svg id="chili" viewBox="0 0 200 200"><path d="M100 30 C108 10 128 6 140 14" stroke="#3f8f3a" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M92 34 C60 40 54 80 62 120 C70 160 100 190 120 192 C110 160 118 110 122 72 C126 46 116 32 92 34Z" fill="#c8402a" stroke="#fff1cf" stroke-width="5"/><path d="M80 60 C74 80 74 100 80 118" stroke="#ff9a7a" stroke-width="8" fill="none" stroke-linecap="round" opacity=".8"/></svg>
+  <div id="glint"><i></i></div>
+  <div id="gsp"></div>
+  <div id="tooth"><svg viewBox="0 0 100 100"><path d="M50 0 C52 38 62 48 100 50 C62 52 52 62 50 100 C48 62 38 52 0 50 C38 48 48 38 50 0Z" fill="#fff"/><circle cx="50" cy="50" r="9" fill="#fff"/></svg></div>
   <div id="price" dir="rtl" lang="he"><div><span class="a"><bdi dir="ltr">230 <span class="nis">₪</span></bdi></span><span class="u">לראש</span></div></div>
   <div id="end"><div class="bg"></div><div class="in" dir="rtl" lang="he">
     <div class="brand"><bdi dir="ltr">ILAY MEAT</bdi></div>
@@ -117,7 +127,8 @@ const T=55.39, K=57.85;
 tl.fromTo('#dim',{opacity:0},{opacity:.5,duration:.35},T);
 tl.fromTo('#cam',{scale:1},{scale:1.14,duration:2.3,ease:'power1.out'},T);
 tl.fromTo('#glow',{opacity:0,scale:.4},{opacity:1,scale:1,duration:.6,ease:'power2.out'},T+.05);
-tl.fromTo('#rays',{opacity:0,rotation:0},{opacity:1,rotation:40,duration:3.9,ease:'none'},T+.05);
+tl.fromTo('#rays',{opacity:0},{opacity:1,duration:.5},T+.05);
+tl.fromTo('#rays',{rotation:0},{rotation:34,duration:3.3,ease:'none',immediateRender:false},T+.05);
 tl.fromTo('#g1 .l',{opacity:0,scale:2.4,y:-40},{opacity:1,scale:1,y:0,duration:.32,ease:'power4.in',stagger:.42},T+.05);
 tl.fromTo('#g1',{opacity:0},{opacity:1,duration:.01},T+.05);
 tl.fromTo('#g1 .shine',{x:0},{x:1500,duration:.7,ease:'power2.inOut'},T+.95);
@@ -143,9 +154,25 @@ const sp=document.getElementById('sparks');
   s.innerHTML='<path d="M28 0 C31 20 36 25 56 28 C36 31 31 36 28 56 C25 36 20 31 0 28 C20 25 25 20 28 0Z" fill="#fff1cf"/>';sp.appendChild(s);
   const t0=K+.25+i*.11;tl.fromTo(s,{scale:0,opacity:0,rotation:0},{scale:1.1,opacity:1,rotation:90,duration:.25,ease:'back.out(3)'},t0);tl.to(s,{scale:0,opacity:0,duration:.3},t0+.45);});
 // hero out
-tl.to(['#g2','#glow','#rays'],{opacity:0,duration:.25},59.0);
-tl.to('#dim',{opacity:0,duration:.3},59.0);
-tl.to('#cam',{scale:1,duration:.4,ease:'power2.inOut'},59.0);
+tl.to(['#g2','#glow','#rays','#sparks'],{opacity:0,duration:.25},58.7);
+tl.to('#dim',{opacity:0,duration:.3},58.7);
+tl.to('#cam',{scale:1,duration:.4,ease:'power2.inOut'},58.7);
+// chili on "צ'ילי מתוק"
+tl.fromTo('#chili',{opacity:0,scale:0,rotation:-60},{opacity:1,scale:1,rotation:12,duration:.4,ease:'back.out(2.4)'},38.0);
+tl.to('#chili',{keyframes:[{rotation:-10,duration:.25},{rotation:8,duration:.25},{rotation:-4,duration:.2}]},38.4);
+tl.to('#chili',{opacity:0,scale:.6,duration:.25},39.25);
+// glint over the chicken tray on "דברים טובים"
+tl.fromTo('#glint',{opacity:0},{opacity:1,duration:.05},39.45);
+tl.fromTo('#glint i',{x:0},{x:1700,duration:.75,ease:'power2.inOut'},39.45);
+tl.to('#glint',{opacity:0,duration:.1},40.25);
+const gsp=document.getElementById('gsp');
+[[260,1250],[520,1120],[760,1380],[380,1560],[880,1180]].forEach(([x,y],i)=>{const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('viewBox','0 0 56 56');s.classList.add('gs');s.style.left=x+'px';s.style.top=y+'px';
+  s.innerHTML='<path d="M28 0 C31 20 36 25 56 28 C36 31 31 36 28 56 C25 36 20 31 0 28 C20 25 25 20 28 0Z" fill="#fff1cf"/>';gsp.appendChild(s);
+  const t0=39.55+i*.12;tl.fromTo(s,{scale:0,opacity:0,rotation:0},{scale:1,opacity:1,rotation:90,duration:.2,ease:'back.out(3)'},t0);tl.to(s,{scale:0,opacity:0,duration:.25},t0+.3);});
+// tooth sparkle when he looks into the camera
+tl.fromTo('#tooth svg',{opacity:0,scale:0,rotation:0},{opacity:1,scale:1.25,rotation:45,duration:.18,ease:'power2.out'},41.0);
+tl.to('#tooth svg',{scale:.9,rotation:90,duration:.14},41.18);
+tl.to('#tooth svg',{opacity:0,scale:0,rotation:135,duration:.18},41.32);
 // price
 tl.fromTo('#price',{opacity:0,scale:.3},{opacity:1,scale:1,duration:.4,ease:'back.out(2.2)'},59.2);
 tl.to('#price',{opacity:0,y:-20,duration:.2},61.2);
