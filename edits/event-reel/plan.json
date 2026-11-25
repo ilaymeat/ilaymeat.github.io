@@ -1,0 +1,19 @@
+{
+  "source": "../../video.mp4",
+  "output": "event-reel-master.mp4",
+  "width": 1080,
+  "height": 1920,
+  "grade": { "contrast": 1.06, "saturation": 1.12, "gamma": 1.0, "sharpen": 0.35 },
+  "loudness": -16,
+  "web": { "output": "event-reel-web.mp4", "width": 720, "crf": 24, "poster": "event-reel-poster.jpg", "poster_at": 0.9 },
+  "overlays": [
+    { "type": "hook", "pos": "top", "start": 0.0, "end": 1.68, "lines": ["שף בשרים", "*עד הבית* שלכם"] },
+    { "type": "label", "pos": "top", "kicker": "בשר פרימיום", "start": 1.78, "end": 4.12, "lines": ["נחתך ומוגש", "*מול האורחים*"] },
+    { "type": "label", "pos": "top", "kicker": "מנות שף", "start": 4.22, "end": 5.9, "lines": ["מדויקות *עד הפרט*"] },
+    { "type": "label", "pos": "top", "kicker": "על הגריל", "start": 6.0, "end": 7.84, "lines": ["צלייה *במקום*,", "חם מהאש"] },
+    { "type": "label", "pos": "bottom", "start": 7.94, "end": 10.95, "lines": ["קרש בשרים", "*לכל השולחן*"] },
+    { "type": "label", "pos": "top", "start": 12.9, "end": 14.82, "lines": ["האורחים", "*כבר מצלמים*"] },
+    { "type": "label", "pos": "top", "start": 14.94, "end": 18.05, "lines": ["ביס אחד,", "*ומבינים*"] },
+    { "type": "end", "start": 18.15, "end": 99, "hold": true, "brand": "ILAY MEAT", "sub": "שף בשרים *עד הבית*", "priceLabel": "ארוחת שף", "price": "230 ₪", "priceUnit": "לאדם", "cta": "בדיקת תאריך בוואטסאפ", "phone": "054-739-0520" }
+  ]
+}

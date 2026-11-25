@@ -1,0 +1,5 @@
+# הגדרות GitHub Pages: קבצי עבודה של Claude לא מתפרסמים באתר
+exclude:
+  - CLAUDE.md
+  - studio
+  - edits
