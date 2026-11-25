@@ -13,11 +13,6 @@
    "why": "glint over the chicken on דברים טובים"
   },
   {
-   "t": 41.0,
-   "sfx": "ting",
-   "why": "tooth sparkle"
-  },
-  {
    "t": 55.1,
    "sfx": "whoosh",
    "why": "וגולת הכותרת enters"
@@ -49,5 +44,5 @@
   }
  ],
  "target": "-16 LUFS",
- "mix": "mix-2.wav"
+ "mix": "mix-3.wav"
 }

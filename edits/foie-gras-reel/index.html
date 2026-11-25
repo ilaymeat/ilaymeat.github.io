@@ -90,7 +90,6 @@ body{background:#14100e}
   <svg id="chili" viewBox="0 0 200 200"><path d="M100 30 C108 10 128 6 140 14" stroke="#3f8f3a" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M92 34 C60 40 54 80 62 120 C70 160 100 190 120 192 C110 160 118 110 122 72 C126 46 116 32 92 34Z" fill="#c8402a" stroke="#fff1cf" stroke-width="5"/><path d="M80 60 C74 80 74 100 80 118" stroke="#ff9a7a" stroke-width="8" fill="none" stroke-linecap="round" opacity=".8"/></svg>
   <div id="glint"><i></i></div>
   <div id="gsp"></div>
-  <div id="tooth"><svg viewBox="0 0 100 100"><path d="M50 0 C52 38 62 48 100 50 C62 52 52 62 50 100 C48 62 38 52 0 50 C38 48 48 38 50 0Z" fill="#fff"/><circle cx="50" cy="50" r="9" fill="#fff"/></svg></div>
   <div id="price" dir="rtl" lang="he"><div><span class="a"><bdi dir="ltr">230 <span class="nis">₪</span></bdi></span><span class="u">לראש</span></div></div>
   <div id="end"><div class="bg"></div><div class="in" dir="rtl" lang="he">
     <div class="brand"><bdi dir="ltr">ILAY MEAT</bdi></div>
@@ -169,10 +168,6 @@ const gsp=document.getElementById('gsp');
 [[260,1250],[520,1120],[760,1380],[380,1560],[880,1180]].forEach(([x,y],i)=>{const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('viewBox','0 0 56 56');s.classList.add('gs');s.style.left=x+'px';s.style.top=y+'px';
   s.innerHTML='<path d="M28 0 C31 20 36 25 56 28 C36 31 31 36 28 56 C25 36 20 31 0 28 C20 25 25 20 28 0Z" fill="#fff1cf"/>';gsp.appendChild(s);
   const t0=39.55+i*.12;tl.fromTo(s,{scale:0,opacity:0,rotation:0},{scale:1,opacity:1,rotation:90,duration:.2,ease:'back.out(3)'},t0);tl.to(s,{scale:0,opacity:0,duration:.25},t0+.3);});
-// tooth sparkle when he looks into the camera
-tl.fromTo('#tooth svg',{opacity:0,scale:0,rotation:0},{opacity:1,scale:1.25,rotation:45,duration:.18,ease:'power2.out'},41.0);
-tl.to('#tooth svg',{scale:.9,rotation:90,duration:.14},41.18);
-tl.to('#tooth svg',{opacity:0,scale:0,rotation:135,duration:.18},41.32);
 // price
 tl.fromTo('#price',{opacity:0,scale:.3},{opacity:1,scale:1,duration:.4,ease:'back.out(2.2)'},59.2);
 tl.to('#price',{opacity:0,y:-20,duration:.2},61.2);
