@@ -1,6 +1,6 @@
 {
  "voice": "base.mp4 audio, compressed, -16 LUFS",
- "music": "original chill reggaeton (dembow) bed, 92 BPM, Am-F-C-G, synthesized for this video (sfx/beat.wav); -11 dB, ducked under the voice (sidechain 3:1), ~20 dB below speech; drums drop 54.9-56.2 before the hero, stop at the end card",
+ "music": "original chill reggaeton (dembow) bed, 92 BPM, Am-F-C-G, synthesized for this video (sfx/beat2.wav, rebuilt with phone-audible mids); -4.5 dB, ducked under the voice (sidechain 2:1), ~12 dB below speech in the 300Hz-8kHz phone band; drums drop 54.9-56.2 before the hero, stop at the end card",
  "cues": [
   {
    "t": 38.0,
@@ -44,5 +44,5 @@
   }
  ],
  "target": "-16 LUFS",
- "mix": "mix-6.wav"
+ "mix": "mix-7.wav"
 }

@@ -51,7 +51,7 @@ def bass(freq, dur):
     n = int(dur * SR); t = np.arange(n) / SR
     x = np.sin(2 * np.pi * freq * t) + 0.25 * np.sin(4 * np.pi * freq * t)
     e = np.minimum(1, t / 0.005) * np.exp(-t / (dur * 0.9))
-    return np.tanh(1.4 * x) * e
+    return np.tanh(3.2 * x) * e
 
 def pad(freqs, dur):
     n = int(dur * SR); t = np.arange(n) / SR
@@ -61,7 +61,7 @@ def pad(freqs, dur):
             x += np.sin(2 * np.pi * f * (1 + det / 100) * t + rng.uniform(0, 6.28))
     a = np.minimum(1, t / 0.6) * np.minimum(1, (dur - t) / 0.6)
     # soft low-pass via moving average
-    k = 24; x = np.convolve(x, np.ones(k) / k, 'same')
+    k = 3; x = np.convolve(x, np.ones(k) / k, 'same')
     return x * a / (3 * len(freqs))
 
 def pluck(freq, dur=0.9):
@@ -84,20 +84,20 @@ for b in range(nbars):
     t0 = b * bar
     root, chord = prog[b % 4]
     # pads through the whole piece
-    add(pad([hz(m) for m in chord], bar + 0.3), t0, 0.55, 0.0)
+    add(pad([hz(m + 12) for m in chord], bar + 0.3), t0, 0.7, 0.0)
     in_break = lambda t: BREAK[0] <= t < BREAK[1]
     for k in range(16):
         t = t0 + k * s16
         if t >= DUR: break
         drums = t < END_DRUMS and not in_break(t)
         if drums:
-            if k % 4 == 0: add(kick(), t, 0.9)
+            if k % 4 == 0: add(kick(), t, 0.6)
             if k in (3, 6, 11, 14): add(snare(), t, 0.42, 0.1)
             if k % 2 == 0: add(hat(k in (6, 14)), t, 0.16, -0.25)
             add(hat(), t + 0.004, 0.05, 0.3)  # shaker 16ths
         # bass on the dembow pulse
         if drums and k in (0, 3, 8, 11):
-            add(bass(hz(root - 24), s16 * (3 if k in (0, 8) else 2)), t, 0.55)
+            add(bass(hz(root - 12), s16 * (3 if k in (0, 8) else 2)), t, 0.4)
     # guitar arpeggio, half-time, soft
     if t0 < END_DRUMS + bar:
         notes = [chord[0] + 12, chord[1] + 12, chord[2] + 12, chord[1] + 12]
@@ -105,7 +105,20 @@ for b in range(nbars):
             t = t0 + j * beat + (beat / 2 if j % 2 else 0)
             if t < DUR and not (BREAK[0] <= t < BREAK[1] - 0.5):
                 if m not in plk_cache: plk_cache[m] = pluck(hz(m))
-                add(plk_cache[m], t, 0.22, 0.35 if j % 2 else -0.35)
+                add(plk_cache[m], t, 0.6, 0.35 if j % 2 else -0.35)
+
+# marimba lead: a short catchy 2-bar motif, mid range (phone-audible)
+def marimba(freq, dur=0.5):
+    n = int(dur * SR); t = np.arange(n) / SR
+    x = np.sin(2*np.pi*freq*t) + 0.35*np.sin(2*np.pi*freq*4*t)*np.exp(-t*30)
+    return x * np.minimum(1, t/0.002) * np.exp(-t*7)
+motif = [(0,76),(1.5,74),(2,72),(3,69),(4,72),(5.5,71),(6,67),(7,69)]  # beats, midi (A minor)
+for b in range(0, nbars, 2):
+    t0 = b * bar
+    for bt, m in motif:
+        t = t0 + bt * beat
+        if t < END_DRUMS and not (BREAK[0] - 0.3 <= t < BREAK[1]):
+            add(marimba(hz(m)), t, 0.5, 0.15)
 
 # riser into the hero moment
 n = int((BREAK[1] - BREAK[0]) * SR); t = np.arange(n) / SR
