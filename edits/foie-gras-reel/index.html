@@ -73,6 +73,8 @@ body{background:#14100e}
   <div id="dim"></div>
   <div id="chips"></div>
   <div id="hook"><div class="k" dir="rtl" lang="he">יום אירוע</div><div class="t" dir="rtl" lang="he"><b><bdi dir="ltr">12</bdi> איש</b>, ככה מתכוננים</div></div>
+  <div id="glint"><i></i></div>
+  <div id="gsp"></div>
   <div id="caps"></div>
   <div id="glow"></div><div id="rays"></div>
   <div id="g1" dir="rtl" lang="he"><span class="l">וגולת</span><span class="l l2">הכותרת</span><div class="shine"></div></div>
@@ -88,8 +90,6 @@ body{background:#14100e}
   </div>
   <div id="sparks"></div>
   <svg id="chili" viewBox="0 0 200 200"><path d="M100 30 C108 10 128 6 140 14" stroke="#3f8f3a" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M92 34 C60 40 54 80 62 120 C70 160 100 190 120 192 C110 160 118 110 122 72 C126 46 116 32 92 34Z" fill="#c8402a" stroke="#fff1cf" stroke-width="5"/><path d="M80 60 C74 80 74 100 80 118" stroke="#ff9a7a" stroke-width="8" fill="none" stroke-linecap="round" opacity=".8"/></svg>
-  <div id="glint"><i></i></div>
-  <div id="gsp"></div>
   <div id="price" dir="rtl" lang="he"><div><span class="a"><bdi dir="ltr">230 <span class="nis">₪</span></bdi></span><span class="u">לראש</span></div></div>
   <div id="end"><div class="bg"></div><div class="in" dir="rtl" lang="he">
     <div class="brand"><bdi dir="ltr">ILAY MEAT</bdi></div>
@@ -110,7 +110,7 @@ const caps=document.getElementById('caps');
 CUES.forEach((c,i)=>{
   if(HIDE.some(([a,b])=>c.s>=a-0.01&&c.s<b)) return;
   const w=document.createElement('div');w.className='cap';
-  let h=c.h;for(const k of KEY){const r=new RegExp('(^|\\s|>)('+k.replace(/"/g,'"')+')(?=\\s|<|$)');if(r.test(h)){h=h.replace(r,'$1<span class="hl">$2</span>');break;}}
+  let h=c.h;for(const k of []){const r=new RegExp('(^|\\s|>)('+k.replace(/"/g,'"')+')(?=\\s|<|$)');if(r.test(h)){h=h.replace(r,'$1<span class="hl">$2</span>');break;}}
   w.innerHTML='<div dir="rtl" lang="he">'+h+'</div>';caps.appendChild(w);
   tl.fromTo(w,{opacity:0,y:18,scale:.96},{opacity:1,y:0,scale:1,duration:.16,ease:'power2.out'},c.s);
   tl.to(w,{opacity:0,duration:.08},Math.max(c.s+.2,c.e-.08));
@@ -161,13 +161,13 @@ tl.fromTo('#chili',{opacity:0,scale:0,rotation:-60},{opacity:1,scale:1,rotation:
 tl.to('#chili',{keyframes:[{rotation:-10,duration:.25},{rotation:8,duration:.25},{rotation:-4,duration:.2}]},38.4);
 tl.to('#chili',{opacity:0,scale:.6,duration:.25},39.25);
 // glint over the chicken tray on "דברים טובים"
-tl.fromTo('#glint',{opacity:0},{opacity:1,duration:.05},39.45);
-tl.fromTo('#glint i',{x:0},{x:1700,duration:.75,ease:'power2.inOut'},39.45);
-tl.to('#glint',{opacity:0,duration:.1},40.25);
+tl.fromTo('#glint',{opacity:0},{opacity:1,duration:.05},38.85);
+tl.fromTo('#glint i',{x:0},{x:1700,duration:1.5,ease:'power1.inOut'},38.85);
+tl.to('#glint',{opacity:0,duration:.15},40.45);
 const gsp=document.getElementById('gsp');
 [[260,1250],[520,1120],[760,1380],[380,1560],[880,1180]].forEach(([x,y],i)=>{const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('viewBox','0 0 56 56');s.classList.add('gs');s.style.left=x+'px';s.style.top=y+'px';
   s.innerHTML='<path d="M28 0 C31 20 36 25 56 28 C36 31 31 36 28 56 C25 36 20 31 0 28 C20 25 25 20 28 0Z" fill="#fff1cf"/>';gsp.appendChild(s);
-  const t0=39.55+i*.12;tl.fromTo(s,{scale:0,opacity:0,rotation:0},{scale:1,opacity:1,rotation:90,duration:.2,ease:'back.out(3)'},t0);tl.to(s,{scale:0,opacity:0,duration:.25},t0+.3);});
+  const t0=38.95+i*.3;tl.fromTo(s,{scale:0,opacity:0,rotation:0},{scale:1,opacity:1,rotation:90,duration:.2,ease:'back.out(3)'},t0);tl.to(s,{scale:0,opacity:0,duration:.25},t0+.3);});
 // price
 tl.fromTo('#price',{opacity:0,scale:.3},{opacity:1,scale:1,duration:.4,ease:'back.out(2.2)'},59.2);
 tl.to('#price',{opacity:0,y:-20,duration:.2},61.2);

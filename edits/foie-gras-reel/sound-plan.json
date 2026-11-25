@@ -8,9 +8,9 @@
    "why": "chili on צ'ילי מתוק"
   },
   {
-   "t": 39.4,
-   "sfx": "soft whoosh",
-   "why": "glint over the chicken on דברים טובים"
+   "t": 38.9,
+   "sfx": "soft shimmer",
+   "why": "sparkle over the chicken on ועוד כמה דברים טובים"
   },
   {
    "t": 55.1,
@@ -44,5 +44,5 @@
   }
  ],
  "target": "-16 LUFS",
- "mix": "mix-3.wav"
+ "mix": "mix-4.wav"
 }
