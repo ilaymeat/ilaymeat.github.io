@@ -55,3 +55,26 @@ Always read that folder first. Material the person put there wins over anything 
 - **Ends**: no "until next time" while the trip is still going. Keep end titles true to the moment.
 - **Always**: pull frames and look at them before sending; say plainly what was checked and what was not (audio is measured, not heard).
 - **Cost and outside actions**: ask before anything paid or public (outside generators, publishing). Everything else, just do it and report.
+
+## 7. Bar's standard brief template
+When Bar sends this template with the brackets filled in, follow it exactly. If brackets are still empty, ask only for the missing ones.
+
+```
+צור לי סרטון [מושן גרפיקס / וידאו מהמצלמה שלי עם אלמנטים / קולנועי / מוקאפ].
+המסר: [מה הסרטון אומר במשפט אחד]
+המטרה: [מודעה בפייסבוק / רילס / סרטון הסבר / רקע לאירוע]
+הקהל: [מי צופה, ומה הוא מרגיש או צריך]
+פורמט: [9:16 לרילס ולמודעות / 16:9 ליוטיוב], אורך [15-30] שניות.
+סגנון: טיפוגרפיה קינטית, תנועת מצלמה רציפה, גימור קולנועי, מאץ' קאט בין שוטים, מסונכרן לביט.
+השתמש בלוגו, בצבעים ובתמונות שבתיקייה, ושמור על השפה העיצובית שלהם.
+אודיו: [מוזיקה בלבד / קריינות / שניהם].
+טקסט בעברית: יישור לימין, בלי אותיות הפוכות או חתוכות, ובדוק כל פריים.
+לפני שאתה מבצע, תראה לי תסריט: שוט אחרי שוט, מה מופיע על המסך, מה הטקסט ובאיזו שנייה. אני מאשר, ורק אז אתה מתחיל.
+לך עד הסוף ואל תחסוך במאמץ.
+בסוף, שמור לסקיל "עריכת וידאו" מה עבד בסרטון הזה.
+```
+
+What this template commits to:
+- **The script** is a table: shot number, seconds from–to, what is on screen, the exact on-screen text, the motion or effect, and the sound. Wait for Bar's approval, and only then build. This is the one case where stopping for approval is required.
+- **Hebrew text**: `dir="rtl"`, Latin words and numbers inside `<bdi dir="ltr">`, bundled fonts only. Before sending, check frames at every text change for reversed, cut or overflowing letters.
+- **At the end**: add what worked and what Bar corrected to the learning log (section 6).
