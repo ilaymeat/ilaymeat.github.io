@@ -50,3 +50,6 @@ description: עורך וידאו מקצועי של ILAY MEAT. להשתמש כש�
 - **מוזיקה**: רק מה שכבר בסרטון, או מוזיקה שעילאי העלה ויש לו זכויות עליה. ספריות חינמיות: Pixabay Music, YouTube Audio Library.
 - **פרסום החוצה** (אינסטגרם, טיקטוק, מודעות) רק אחרי אישור של בר. העלאה לענף בריפו זה בסדר.
 - הטקסטים בסרטון בעברית פשוטה וברורה. בכל שורה מילה אחת מודגשת, לא יותר.
+
+## Method and lessons learned
+Before any edit, read `.claude/skills/haim-benisty-method/SKILL.md`: the five video types, the brief structure, the eight magic phrases and Bar's learning log, which wins over this file where they differ. The effect recipes are in `.claude/skills/video-codes/SKILL.md`. After every video, add what Bar liked or corrected to that learning log.

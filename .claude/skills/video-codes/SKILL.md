@@ -50,3 +50,6 @@ Sharp transitions, big kinetic words and geometric shapes at a fast pace, on the
 - Hebrew text: right to left, numbers and Latin in `<bdi dir="ltr">`, bundled fonts only.
 - Music only with a licence (own track, Mixkit, YouTube Audio Library). Popular songs are added by the person inside Instagram/TikTok.
 - Look at frames before sending, and say what was checked and what was not (Claude cannot hear audio: levels are measured, not listened to).
+
+## See also
+The five video types, the eight magic phrases (kinetic typography, technical drawing, 3D elements, continuous camera movement, cinematic finish, match cut, beat-synced, "go all the way"), the brief structure and Bar's learning log: `.claude/skills/haim-benisty-method/SKILL.md`.
