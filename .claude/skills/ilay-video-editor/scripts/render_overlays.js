@@ -14,13 +14,14 @@ const font = f => 'data:font/' + (f.endsWith('woff2') ? 'woff2' : 'woff') + ';ba
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
 // מספרים ואנגלית בתוך bdi כדי שלא יקפצו לצד הלא נכון
-const bidi = s => esc(s).replace(/([0-9A-Za-z][0-9A-Za-z₪\-–.,:&' ]*[0-9A-Za-z₪]|[0-9A-Za-z])/g, '<bdi dir="ltr">$1</bdi>');
+const bidi = s => esc(s).replace(/([0-9A-Za-z][0-9A-Za-z₪\-–.,:&' ]*[0-9A-Za-z₪]|[0-9A-Za-z])/g, '<bdi dir="ltr">$1</bdi>').replace(/₪/g, '<span class="nis">₪</span>');
+// The ₪ sign is drawn in Heebo: Secular One draws it in a stylised shape that reads like the letter ש.
 const mark = s => bidi(s).replace(/\*([^*]+)\*/g, '<span class="hl">$1</span>');
 
 const css = `
-@font-face{font-family:Secular;src:url(${font('secular-one-400-hebrew.woff2')}) format('woff2');unicode-range:U+0590-05FF,U+FB1D-FB4F}
+@font-face{font-family:Secular;src:url(${font('secular-one-400-hebrew.woff2')}) format('woff2');unicode-range:U+0590-05FF,U+20AA,U+FB1D-FB4F}
 @font-face{font-family:Secular;src:url(${font('secular-one-400-latin.woff')}) format('woff')}
-@font-face{font-family:Heebo;font-weight:100 900;src:url(${font('heebo-100-900-hebrew.woff')}) format('woff');unicode-range:U+0590-05FF,U+FB1D-FB4F}
+@font-face{font-family:Heebo;font-weight:100 900;src:url(${font('heebo-100-900-hebrew.woff')}) format('woff');unicode-range:U+0590-05FF,U+20AA,U+FB1D-FB4F}
 @font-face{font-family:Heebo;font-weight:100 900;src:url(${font('heebo-100-900-latin.woff')}) format('woff')}
 :root{--coal:#14100e;--cream:#f6ede4;--gold:#d6a656;--ember:#c8402a;--wa:#1fae5b}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -35,11 +36,12 @@ html,body{width:${W}px;height:${H}px;background:transparent;direction:rtl;font-f
 .text{font-family:Secular;font-size:92px;line-height:1.08;text-wrap:balance;text-shadow:0 4px 24px rgba(0,0,0,.55)}
 .hook .text{font-size:120px}
 .hl{color:var(--gold);background:linear-gradient(transparent 72%,rgba(200,64,42,.85) 72%,rgba(200,64,42,.85) 92%,transparent 92%);padding:0 .08em}
-.end{position:absolute;left:0;right:0;top:40%;bottom:0;background:linear-gradient(180deg,rgba(20,16,14,0) 0%,rgba(20,16,14,.93) 16%,var(--coal) 100%);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:190px;gap:30px;text-align:center}
+.end{position:absolute;left:0;right:0;top:40%;bottom:0;background:linear-gradient(180deg,rgba(20,16,14,0) 0%,rgba(20,16,14,.97) 10%,var(--coal) 18%,var(--coal) 100%);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:190px;gap:30px;text-align:center}
 .brand{font-family:Secular;font-size:120px;color:var(--gold);direction:ltr;letter-spacing:.02em}
 .sub{font-family:Secular;font-size:64px}
 .price{display:inline-flex;align-items:baseline;gap:20px;border:3px solid var(--gold);border-radius:999px;padding:14px 46px;font-family:Heebo;font-weight:700;font-size:46px}
 .price b{font-family:Secular;font-weight:400;font-size:84px;color:var(--gold)}
+.nis{font-family:Heebo;font-weight:700;font-size:.82em}
 .cta{display:inline-flex;align-items:center;gap:20px;background:var(--wa);color:#fff;border-radius:999px;padding:22px 54px;font-family:Heebo;font-weight:800;font-size:52px;box-shadow:0 14px 40px rgba(0,0,0,.45)}
 .phone{font-family:Heebo;font-weight:700;font-size:46px;color:var(--cream);opacity:.9}
 `;
