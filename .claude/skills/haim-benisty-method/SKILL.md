@@ -7,10 +7,17 @@ description: The full method for editing video with Claude, from Haim Benisty's 
 
 Source: the YouTube guide by Haim Benisty (@haim.benisty), "עריכת וידאו בקלוד - המדריך המלא" (youtu.be/E6fTSxKvwWw). Bar pasted its transcript on 2026-11-26. The learning log at the end holds Bar's own feedback, and it wins over everything above it.
 
-## 1. A tidy working folder
-One folder per project, for example `Claude/Projects/Video editing/`, holding:
-- the brand kit: logo, colours, fonts, the design language
-- images, music saved along the way, and earlier videos
+## 1. A tidy working folder (three nested folders, as in the guide)
+1. On the desktop, a folder named **`Claude`**.
+2. Inside it, a folder named **`פרויקטים`** (projects), which holds every project.
+3. Inside that, a folder with the project's name. The guide's example is **`עריכת וידאו`** (video editing).
+
+Open a new chat in Claude Code and choose that project folder, so Claude takes everything it needs from it.
+
+What goes in it, in the guide's words: the brand colours, the logo, the images to use, the music saved along the way, and the design language. The 3D device model kit for mockups goes there too (tip 3).
+
+Bar's addition, not from the guide: earlier videos and raw footage for the project can sit there as well.
+
 Always read that folder first. Material the person put there wins over anything generic.
 
 ## 2. The five video types (decide first)
