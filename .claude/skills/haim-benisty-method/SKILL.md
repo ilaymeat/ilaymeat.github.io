@@ -35,6 +35,8 @@ Always read that folder first. Material the person put there wins over anything 
 5. **Sound**: voiceover, music, both or neither.
 6. **Script first**: for a video built from scratch (motion graphics, cinematic, avatar), write a short script and storyboard and show it before the long build. Fixing the plan takes a minute; fixing an hour-long render takes an hour. For edits of existing footage, Bar prefers that work continues without stopping, so state the plan in one or two lines and build.
 
+The guide's opening prompt, the simplest first video: "צור לי סרטון מושן גרפיקס שמראה לי מה אתה יודע לעשות. לך עד הסוף ואל תחסוך במאמץ." From there, improve the prompt and add the brand material to the project folder.
+
 ## 4. The eight magic phrases (what each one means in practice)
 1. **Kinetic typography** — words fly in, scale, rotate and stack on the beat, one idea per screen. Use the studio effect `kinetic` and the cascade/slam patterns.
 2. **Technical drawing** — blueprint grids, construction lines and diagrams that draw themselves (SVG `stroke-dashoffset`). It is ideal for explainers.
@@ -48,14 +50,14 @@ Always read that folder first. Material the person put there wins over anything 
 ## 5. The three tips
 1. **Outside generators** (Magnific / Higgsfield) for cinematic clips and pro voiceover. They cost money, so ask first.
 2. **A video-editing skill that learns**: after every video, write what worked and what did not into the learning log below. Praise goes in as "keep doing this"; corrections go in as rules.
-3. **Device mockup models**: realistic devices for showing apps and websites. Keep any kit the person supplies in the project folder.
+3. **Device mockup models**: realistic devices for showing apps and websites. The 3D device model kit can be downloaded from schooliner.com, on the page for Haim Benisty's guide. Put it in the project folder.
 
 ## 6. Learning log — Bar's feedback (these rules win)
 - **Language**: every reply, report, note and on-screen explanation is in plain Hebrew only, with no English words in replies. Video titles may be English when that is the style.
 - **A small animation in every video**: a doodle, a kinetic title or a motion-graphics touch.
 - **Consistency**: what is on screen must match what is heard. Never show a photo with no person over someone's speech; show the speaker or the team. B-roll and photos go between the lines, over music.
 - **Burned-in text in the source** must match the moment (a "YO DECIDO" banner may appear only on the "yo decido" line).
-- **Captions**: plain white with a dark shadow, and no colour highlight unless asked. Make Hebrew, Spanish and bilingual versions when the speech is Spanish.
+- **Captions**: plain white with a dark shadow, and no colour highlight unless asked. Make Hebrew, Spanish and bilingual versions when the speech is Spanish. In ILAY MEAT videos, one word stays gold with a red underline, following the brand's style.
 - **Music**: real, licensed tracks (Mixkit) beat synthesized ones. Music must be audible on a phone: measure the 300 Hz–8 kHz band, about 10–12 dB under the voice, full level between lines. Faster and more rhythmic is preferred for team and booth videos. Popular songs (Bad Bunny and so on) are added by Bar inside Instagram, so offer a version without sound.
 - **Effects Bar liked**: zoom punch, flash, whip pan, speed ramp, spin, light leak, beat pulse, glitch, colour split, hand-drawn intro, chapter word slams, before/after sweep.
 - **Effects that failed**: a tooth sparkle on a talking mouth (it looks odd when the head moves; use it only on a still, big smile); a light effect that outlives its object (end it when the object leaves the frame); transitions that reveal black edges (scale up while moving or rotating).
